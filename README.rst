@@ -8,7 +8,7 @@ Installation
 
 Install with pip::
 
-  pip install pygameoflife
+  pip install nanolife
 
 Install from source::
 
@@ -20,18 +20,18 @@ Running
 
 Run via launch script installed with pip package::
 
-  pygameoflife
+  nanolife
 
 Run as a Python module::
 
-  python -m pygameoflife
+  python -m nanolife
 
 Using inside of code
 --------------------
 
 To import the class in to your own code::
 
-  from pygameoflife.LifeGame import LifeGame
+  from nanolife.LifeGame import LifeGame
   LifeGame().run()
 
 
