@@ -13,7 +13,7 @@ def readme_file_contents():
 
 setup(
     name='nanolife',
-    version='1.0.1',
+    version='1.0.2',
     description='Conway\'s Game of Life implemented with PyGame.',
     long_description=readme_file_contents(),
     url='https://github.com/DevDungeon/PyGameOfLife',
