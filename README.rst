@@ -50,10 +50,11 @@ There are a couple keybinds available:
 - s - Start/stop (toggle pause)
 - r - Randomize the grid
 
-Source code
+Links
 -----------
 
-https://github.com/DevDungeon/NanoLifePy
+- https://github.com/DevDungeon/NanoLifePy
+- https://pypi.org/project/nanolife/
 
 Contact
 -------
