@@ -223,9 +223,9 @@ class LifeGame:
                 return
 
             self.handle_events()
-            if self.paused:
-                continue
 
-            self.update_generation()
-            self.draw_grid()
+            if not self.paused:
+                self.update_generation()
+                self.draw_grid()
+
             clock.tick(self.max_fps)
