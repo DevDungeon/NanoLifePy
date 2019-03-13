@@ -28,8 +28,7 @@ class LifeGame:
         self.clear_screen()
         pygame.display.flip()
 
-        self.last_update_completed = 0
-        self.desired_milliseconds_between_updates = (1.0 / max_fps) * 1000.0
+        self.max_fps = max_fps
 
         self.active_grid = 0
         self.num_cols = int(self.screen_width / self.cell_size)
@@ -216,6 +215,9 @@ class LifeGame:
 
         :return:
         """
+
+        clock = pygame.time.Clock()
+
         while True:
             if self.game_over:
                 return
@@ -226,18 +228,4 @@ class LifeGame:
 
             self.update_generation()
             self.draw_grid()
-            self.cap_frame_rate()
-
-    def cap_frame_rate(self):
-        """
-        If game is running too fast and updating frames too frequently,
-        just wait to maintain stable framerate
-
-        :return:
-        """
-        now = pygame.time.get_ticks()
-        milliseconds_since_last_update = now - self.last_update_completed
-        time_to_sleep = self.desired_milliseconds_between_updates - milliseconds_since_last_update
-        if time_to_sleep > 0:
-            pygame.time.delay(int(time_to_sleep))
-        self.last_update_completed = now
+            clock.tick(self.max_fps)
